@@ -4,6 +4,23 @@ import java.io.*;
 
 class Codechef
 {
+	//
+	 static int missingNumber(int arr[]) {
+       
+       int xorSum = 0;
+       
+       for(int n : arr) {
+           xorSum = xorSum ^ n;
+       }
+       
+       for(int i=1; i<= arr.length; i++){
+           xorSum = xorSum ^ i;
+       }
+       
+       return xorSum;
+       
+   
+}
 
   //
   
@@ -197,6 +214,12 @@ class Codechef
     
 	public static void main (String[] args) throws java.lang.Exception
 	{ 
+		//
+		int arr[] = {0, 2, 3, 4, 1};
+	   
+	   int number  = missingNumber(arr);
+	   System.out.println("missingNumber is " + number);
+		
     //
      int arr[] = {0, 1, 0, 1, 0, 1};
 	    
